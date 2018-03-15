@@ -1,0 +1,764 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7CCA853266400D5DB84D78DB /* libPods-ZXGPhoneActiveUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0283AF2A88B943A6AEA65B /* libPods-ZXGPhoneActiveUITests.a */; };
+		A3E6F6702E33FDB07218ED38 /* libPods-ZXGPhoneActive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 515C989F49AEB44951F016EB /* libPods-ZXGPhoneActive.a */; };
+		D5DA84FD6B2EE62AC7AA9E9C /* libPods-ZXGPhoneActiveTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15CEFD4B5D4266586AD7967A /* libPods-ZXGPhoneActiveTests.a */; };
+		E31FE957205A5EAE00D8D986 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E31FE956205A5EAE00D8D986 /* AppDelegate.m */; };
+		E31FE95A205A5EAE00D8D986 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E31FE959205A5EAE00D8D986 /* ViewController.m */; };
+		E31FE95D205A5EAE00D8D986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31FE95B205A5EAE00D8D986 /* Main.storyboard */; };
+		E31FE95F205A5EAE00D8D986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31FE95E205A5EAE00D8D986 /* Assets.xcassets */; };
+		E31FE962205A5EAE00D8D986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31FE960205A5EAE00D8D986 /* LaunchScreen.storyboard */; };
+		E31FE965205A5EAE00D8D986 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E31FE964205A5EAE00D8D986 /* main.m */; };
+		E31FE96F205A5EAE00D8D986 /* ZXGPhoneActiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E31FE96E205A5EAE00D8D986 /* ZXGPhoneActiveTests.m */; };
+		E31FE97A205A5EAE00D8D986 /* ZXGPhoneActiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E31FE979205A5EAE00D8D986 /* ZXGPhoneActiveUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E31FE96B205A5EAE00D8D986 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E31FE94A205A5EAE00D8D986 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E31FE951205A5EAE00D8D986;
+			remoteInfo = ZXGPhoneActive;
+		};
+		E31FE976205A5EAE00D8D986 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E31FE94A205A5EAE00D8D986 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E31FE951205A5EAE00D8D986;
+			remoteInfo = ZXGPhoneActive;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15CEFD4B5D4266586AD7967A /* libPods-ZXGPhoneActiveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZXGPhoneActiveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26ADF4FDF9EC31745E6237FC /* Pods-ZXGPhoneActiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXGPhoneActiveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZXGPhoneActiveUITests/Pods-ZXGPhoneActiveUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3F9D5710E9B197F0EBABE956 /* Pods-ZXGPhoneActiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXGPhoneActiveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZXGPhoneActiveTests/Pods-ZXGPhoneActiveTests.release.xcconfig"; sourceTree = "<group>"; };
+		515C989F49AEB44951F016EB /* libPods-ZXGPhoneActive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZXGPhoneActive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B76B6E44B64BC32951165FA0 /* Pods-ZXGPhoneActive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXGPhoneActive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZXGPhoneActive/Pods-ZXGPhoneActive.debug.xcconfig"; sourceTree = "<group>"; };
+		BD0283AF2A88B943A6AEA65B /* libPods-ZXGPhoneActiveUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZXGPhoneActiveUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD04E765C498655C8DE6C7B8 /* Pods-ZXGPhoneActiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXGPhoneActiveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZXGPhoneActiveUITests/Pods-ZXGPhoneActiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CFD8AD7C3246C70C15E7A8FA /* Pods-ZXGPhoneActiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXGPhoneActiveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZXGPhoneActiveTests/Pods-ZXGPhoneActiveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D7153A32A0CB0D3F5303F0BC /* Pods-ZXGPhoneActive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXGPhoneActive.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZXGPhoneActive/Pods-ZXGPhoneActive.release.xcconfig"; sourceTree = "<group>"; };
+		E31FE952205A5EAE00D8D986 /* ZXGPhoneActive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXGPhoneActive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E31FE955205A5EAE00D8D986 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E31FE956205A5EAE00D8D986 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E31FE958205A5EAE00D8D986 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E31FE959205A5EAE00D8D986 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E31FE95C205A5EAE00D8D986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E31FE95E205A5EAE00D8D986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E31FE961205A5EAE00D8D986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E31FE963205A5EAE00D8D986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E31FE964205A5EAE00D8D986 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E31FE96A205A5EAE00D8D986 /* ZXGPhoneActiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZXGPhoneActiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E31FE96E205A5EAE00D8D986 /* ZXGPhoneActiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGPhoneActiveTests.m; sourceTree = "<group>"; };
+		E31FE970205A5EAE00D8D986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E31FE975205A5EAE00D8D986 /* ZXGPhoneActiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZXGPhoneActiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E31FE979205A5EAE00D8D986 /* ZXGPhoneActiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGPhoneActiveUITests.m; sourceTree = "<group>"; };
+		E31FE97B205A5EAE00D8D986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E31FE94F205A5EAE00D8D986 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3E6F6702E33FDB07218ED38 /* libPods-ZXGPhoneActive.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E31FE967205A5EAE00D8D986 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5DA84FD6B2EE62AC7AA9E9C /* libPods-ZXGPhoneActiveTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E31FE972205A5EAE00D8D986 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CCA853266400D5DB84D78DB /* libPods-ZXGPhoneActiveUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E705520ADAF318845A7F3BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B76B6E44B64BC32951165FA0 /* Pods-ZXGPhoneActive.debug.xcconfig */,
+				D7153A32A0CB0D3F5303F0BC /* Pods-ZXGPhoneActive.release.xcconfig */,
+				CFD8AD7C3246C70C15E7A8FA /* Pods-ZXGPhoneActiveTests.debug.xcconfig */,
+				3F9D5710E9B197F0EBABE956 /* Pods-ZXGPhoneActiveTests.release.xcconfig */,
+				BD04E765C498655C8DE6C7B8 /* Pods-ZXGPhoneActiveUITests.debug.xcconfig */,
+				26ADF4FDF9EC31745E6237FC /* Pods-ZXGPhoneActiveUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5CB474F3DC372FFE9BA6228C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				515C989F49AEB44951F016EB /* libPods-ZXGPhoneActive.a */,
+				15CEFD4B5D4266586AD7967A /* libPods-ZXGPhoneActiveTests.a */,
+				BD0283AF2A88B943A6AEA65B /* libPods-ZXGPhoneActiveUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E31FE949205A5EAE00D8D986 = {
+			isa = PBXGroup;
+			children = (
+				E31FE954205A5EAE00D8D986 /* ZXGPhoneActive */,
+				E31FE96D205A5EAE00D8D986 /* ZXGPhoneActiveTests */,
+				E31FE978205A5EAE00D8D986 /* ZXGPhoneActiveUITests */,
+				E31FE953205A5EAE00D8D986 /* Products */,
+				1E705520ADAF318845A7F3BA /* Pods */,
+				5CB474F3DC372FFE9BA6228C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E31FE953205A5EAE00D8D986 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E31FE952205A5EAE00D8D986 /* ZXGPhoneActive.app */,
+				E31FE96A205A5EAE00D8D986 /* ZXGPhoneActiveTests.xctest */,
+				E31FE975205A5EAE00D8D986 /* ZXGPhoneActiveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E31FE954205A5EAE00D8D986 /* ZXGPhoneActive */ = {
+			isa = PBXGroup;
+			children = (
+				E31FE955205A5EAE00D8D986 /* AppDelegate.h */,
+				E31FE956205A5EAE00D8D986 /* AppDelegate.m */,
+				E31FE958205A5EAE00D8D986 /* ViewController.h */,
+				E31FE959205A5EAE00D8D986 /* ViewController.m */,
+				E31FE95B205A5EAE00D8D986 /* Main.storyboard */,
+				E31FE95E205A5EAE00D8D986 /* Assets.xcassets */,
+				E31FE960205A5EAE00D8D986 /* LaunchScreen.storyboard */,
+				E31FE963205A5EAE00D8D986 /* Info.plist */,
+				E31FE964205A5EAE00D8D986 /* main.m */,
+			);
+			path = ZXGPhoneActive;
+			sourceTree = "<group>";
+		};
+		E31FE96D205A5EAE00D8D986 /* ZXGPhoneActiveTests */ = {
+			isa = PBXGroup;
+			children = (
+				E31FE96E205A5EAE00D8D986 /* ZXGPhoneActiveTests.m */,
+				E31FE970205A5EAE00D8D986 /* Info.plist */,
+			);
+			path = ZXGPhoneActiveTests;
+			sourceTree = "<group>";
+		};
+		E31FE978205A5EAE00D8D986 /* ZXGPhoneActiveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E31FE979205A5EAE00D8D986 /* ZXGPhoneActiveUITests.m */,
+				E31FE97B205A5EAE00D8D986 /* Info.plist */,
+			);
+			path = ZXGPhoneActiveUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E31FE951205A5EAE00D8D986 /* ZXGPhoneActive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E31FE97E205A5EAE00D8D986 /* Build configuration list for PBXNativeTarget "ZXGPhoneActive" */;
+			buildPhases = (
+				774AB7B0499F5CE27C7E1074 /* [CP] Check Pods Manifest.lock */,
+				E31FE94E205A5EAE00D8D986 /* Sources */,
+				E31FE94F205A5EAE00D8D986 /* Frameworks */,
+				E31FE950205A5EAE00D8D986 /* Resources */,
+				C732EB48715F197618049E82 /* [CP] Embed Pods Frameworks */,
+				A0CE14757554DE5FAF4A41A2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZXGPhoneActive;
+			productName = ZXGPhoneActive;
+			productReference = E31FE952205A5EAE00D8D986 /* ZXGPhoneActive.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E31FE969205A5EAE00D8D986 /* ZXGPhoneActiveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E31FE981205A5EAE00D8D986 /* Build configuration list for PBXNativeTarget "ZXGPhoneActiveTests" */;
+			buildPhases = (
+				1DE1A658F106B31B282F7A60 /* [CP] Check Pods Manifest.lock */,
+				E31FE966205A5EAE00D8D986 /* Sources */,
+				E31FE967205A5EAE00D8D986 /* Frameworks */,
+				E31FE968205A5EAE00D8D986 /* Resources */,
+				F8A8BDE64B7444F0F0D72336 /* [CP] Embed Pods Frameworks */,
+				511F068C84A0218B9DCDA692 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E31FE96C205A5EAE00D8D986 /* PBXTargetDependency */,
+			);
+			name = ZXGPhoneActiveTests;
+			productName = ZXGPhoneActiveTests;
+			productReference = E31FE96A205A5EAE00D8D986 /* ZXGPhoneActiveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E31FE974205A5EAE00D8D986 /* ZXGPhoneActiveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E31FE984205A5EAE00D8D986 /* Build configuration list for PBXNativeTarget "ZXGPhoneActiveUITests" */;
+			buildPhases = (
+				18CC28F82B38AE9E792D2677 /* [CP] Check Pods Manifest.lock */,
+				E31FE971205A5EAE00D8D986 /* Sources */,
+				E31FE972205A5EAE00D8D986 /* Frameworks */,
+				E31FE973205A5EAE00D8D986 /* Resources */,
+				724B04471D77C393E766952B /* [CP] Embed Pods Frameworks */,
+				BA1F4126C228D7FB779E3154 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E31FE977205A5EAE00D8D986 /* PBXTargetDependency */,
+			);
+			name = ZXGPhoneActiveUITests;
+			productName = ZXGPhoneActiveUITests;
+			productReference = E31FE975205A5EAE00D8D986 /* ZXGPhoneActiveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E31FE94A205A5EAE00D8D986 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = zxg;
+				TargetAttributes = {
+					E31FE951205A5EAE00D8D986 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					E31FE969205A5EAE00D8D986 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E31FE951205A5EAE00D8D986;
+					};
+					E31FE974205A5EAE00D8D986 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E31FE951205A5EAE00D8D986;
+					};
+				};
+			};
+			buildConfigurationList = E31FE94D205A5EAE00D8D986 /* Build configuration list for PBXProject "ZXGPhoneActive" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E31FE949205A5EAE00D8D986;
+			productRefGroup = E31FE953205A5EAE00D8D986 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E31FE951205A5EAE00D8D986 /* ZXGPhoneActive */,
+				E31FE969205A5EAE00D8D986 /* ZXGPhoneActiveTests */,
+				E31FE974205A5EAE00D8D986 /* ZXGPhoneActiveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E31FE950205A5EAE00D8D986 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E31FE962205A5EAE00D8D986 /* LaunchScreen.storyboard in Resources */,
+				E31FE95F205A5EAE00D8D986 /* Assets.xcassets in Resources */,
+				E31FE95D205A5EAE00D8D986 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E31FE968205A5EAE00D8D986 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E31FE973205A5EAE00D8D986 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18CC28F82B38AE9E792D2677 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZXGPhoneActiveUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1DE1A658F106B31B282F7A60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZXGPhoneActiveTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		511F068C84A0218B9DCDA692 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXGPhoneActiveTests/Pods-ZXGPhoneActiveTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		724B04471D77C393E766952B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXGPhoneActiveUITests/Pods-ZXGPhoneActiveUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		774AB7B0499F5CE27C7E1074 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZXGPhoneActive-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0CE14757554DE5FAF4A41A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXGPhoneActive/Pods-ZXGPhoneActive-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA1F4126C228D7FB779E3154 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXGPhoneActiveUITests/Pods-ZXGPhoneActiveUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C732EB48715F197618049E82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXGPhoneActive/Pods-ZXGPhoneActive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8A8BDE64B7444F0F0D72336 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZXGPhoneActiveTests/Pods-ZXGPhoneActiveTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E31FE94E205A5EAE00D8D986 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E31FE95A205A5EAE00D8D986 /* ViewController.m in Sources */,
+				E31FE965205A5EAE00D8D986 /* main.m in Sources */,
+				E31FE957205A5EAE00D8D986 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E31FE966205A5EAE00D8D986 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E31FE96F205A5EAE00D8D986 /* ZXGPhoneActiveTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E31FE971205A5EAE00D8D986 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E31FE97A205A5EAE00D8D986 /* ZXGPhoneActiveUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E31FE96C205A5EAE00D8D986 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E31FE951205A5EAE00D8D986 /* ZXGPhoneActive */;
+			targetProxy = E31FE96B205A5EAE00D8D986 /* PBXContainerItemProxy */;
+		};
+		E31FE977205A5EAE00D8D986 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E31FE951205A5EAE00D8D986 /* ZXGPhoneActive */;
+			targetProxy = E31FE976205A5EAE00D8D986 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E31FE95B205A5EAE00D8D986 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E31FE95C205A5EAE00D8D986 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E31FE960205A5EAE00D8D986 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E31FE961205A5EAE00D8D986 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E31FE97C205A5EAE00D8D986 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E31FE97D205A5EAE00D8D986 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E31FE97F205A5EAE00D8D986 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B76B6E44B64BC32951165FA0 /* Pods-ZXGPhoneActive.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2NW8BV74J4;
+				INFOPLIST_FILE = ZXGPhoneActive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zxg.com;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E31FE980205A5EAE00D8D986 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7153A32A0CB0D3F5303F0BC /* Pods-ZXGPhoneActive.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2NW8BV74J4;
+				INFOPLIST_FILE = ZXGPhoneActive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zxg.com;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E31FE982205A5EAE00D8D986 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFD8AD7C3246C70C15E7A8FA /* Pods-ZXGPhoneActiveTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZXGPhoneActiveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zxg.com.ZXGPhoneActiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZXGPhoneActive.app/ZXGPhoneActive";
+			};
+			name = Debug;
+		};
+		E31FE983205A5EAE00D8D986 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F9D5710E9B197F0EBABE956 /* Pods-ZXGPhoneActiveTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZXGPhoneActiveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zxg.com.ZXGPhoneActiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZXGPhoneActive.app/ZXGPhoneActive";
+			};
+			name = Release;
+		};
+		E31FE985205A5EAE00D8D986 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD04E765C498655C8DE6C7B8 /* Pods-ZXGPhoneActiveUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZXGPhoneActiveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zxg.com.ZXGPhoneActiveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZXGPhoneActive;
+			};
+			name = Debug;
+		};
+		E31FE986205A5EAE00D8D986 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26ADF4FDF9EC31745E6237FC /* Pods-ZXGPhoneActiveUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZXGPhoneActiveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zxg.com.ZXGPhoneActiveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZXGPhoneActive;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E31FE94D205A5EAE00D8D986 /* Build configuration list for PBXProject "ZXGPhoneActive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E31FE97C205A5EAE00D8D986 /* Debug */,
+				E31FE97D205A5EAE00D8D986 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E31FE97E205A5EAE00D8D986 /* Build configuration list for PBXNativeTarget "ZXGPhoneActive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E31FE97F205A5EAE00D8D986 /* Debug */,
+				E31FE980205A5EAE00D8D986 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E31FE981205A5EAE00D8D986 /* Build configuration list for PBXNativeTarget "ZXGPhoneActiveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E31FE982205A5EAE00D8D986 /* Debug */,
+				E31FE983205A5EAE00D8D986 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E31FE984205A5EAE00D8D986 /* Build configuration list for PBXNativeTarget "ZXGPhoneActiveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E31FE985205A5EAE00D8D986 /* Debug */,
+				E31FE986205A5EAE00D8D986 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E31FE94A205A5EAE00D8D986 /* Project object */;
+}
