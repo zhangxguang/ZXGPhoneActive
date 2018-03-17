@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <Masonry/Masonry.h>
 #import <CoreLocation/CoreLocation.h>
+#import "ZPAPhoneActiveTime.h"
 
 @interface ViewController () <CLLocationManagerDelegate>
 
@@ -27,6 +28,13 @@
     [self initSubViews];
     [self initLocationManger];
     [self initNSTimer];
+    [self initPhoneActiveTime];
+}
+
+- (void)initPhoneActiveTime
+{
+     ZPAPhoneActiveTime *phoneActiveTime = [ZPAPhoneActiveTime sharedPhoneActiveTime];
+    [phoneActiveTime recordPhoneActiveTime];
 }
 
 - (void)initSubViews
@@ -92,7 +100,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     CLLocation *newLocation = locations[0];
-
+    return;
     //获取当前所在的城市名
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     //根据经纬度反向地理编译出地址信息

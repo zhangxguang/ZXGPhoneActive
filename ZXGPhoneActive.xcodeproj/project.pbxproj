@@ -18,6 +18,8 @@
 		E31FE965205A5EAE00D8D986 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E31FE964205A5EAE00D8D986 /* main.m */; };
 		E31FE96F205A5EAE00D8D986 /* ZXGPhoneActiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E31FE96E205A5EAE00D8D986 /* ZXGPhoneActiveTests.m */; };
 		E31FE97A205A5EAE00D8D986 /* ZXGPhoneActiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E31FE979205A5EAE00D8D986 /* ZXGPhoneActiveUITests.m */; };
+		E3EFD15B205D0BCA00F15364 /* ZPAScreenLockState.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFD15A205D0BCA00F15364 /* ZPAScreenLockState.m */; };
+		E3EFD15E205D0C7200F15364 /* ZPAPhoneActiveTime.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFD15D205D0C7200F15364 /* ZPAPhoneActiveTime.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,10 @@
 		E31FE975205A5EAE00D8D986 /* ZXGPhoneActiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZXGPhoneActiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31FE979205A5EAE00D8D986 /* ZXGPhoneActiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGPhoneActiveUITests.m; sourceTree = "<group>"; };
 		E31FE97B205A5EAE00D8D986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3EFD159205D0BCA00F15364 /* ZPAScreenLockState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPAScreenLockState.h; sourceTree = "<group>"; };
+		E3EFD15A205D0BCA00F15364 /* ZPAScreenLockState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPAScreenLockState.m; sourceTree = "<group>"; };
+		E3EFD15C205D0C7200F15364 /* ZPAPhoneActiveTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPAPhoneActiveTime.h; sourceTree = "<group>"; };
+		E3EFD15D205D0C7200F15364 /* ZPAPhoneActiveTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPAPhoneActiveTime.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,7 @@
 		E31FE954205A5EAE00D8D986 /* ZXGPhoneActive */ = {
 			isa = PBXGroup;
 			children = (
+				E3EFD157205D0B5100F15364 /* 监测手机状态 */,
 				E31FE955205A5EAE00D8D986 /* AppDelegate.h */,
 				E31FE956205A5EAE00D8D986 /* AppDelegate.m */,
 				E31FE958205A5EAE00D8D986 /* ViewController.h */,
@@ -170,6 +177,25 @@
 				E31FE97B205A5EAE00D8D986 /* Info.plist */,
 			);
 			path = ZXGPhoneActiveUITests;
+			sourceTree = "<group>";
+		};
+		E3EFD157205D0B5100F15364 /* 监测手机状态 */ = {
+			isa = PBXGroup;
+			children = (
+				E3EFD158205D0B6000F15364 /* 手机屏幕锁定和解锁 */,
+			);
+			path = "监测手机状态";
+			sourceTree = "<group>";
+		};
+		E3EFD158205D0B6000F15364 /* 手机屏幕锁定和解锁 */ = {
+			isa = PBXGroup;
+			children = (
+				E3EFD159205D0BCA00F15364 /* ZPAScreenLockState.h */,
+				E3EFD15A205D0BCA00F15364 /* ZPAScreenLockState.m */,
+				E3EFD15C205D0C7200F15364 /* ZPAPhoneActiveTime.h */,
+				E3EFD15D205D0C7200F15364 /* ZPAPhoneActiveTime.m */,
+			);
+			path = "手机屏幕锁定和解锁";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,7 +492,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3EFD15B205D0BCA00F15364 /* ZPAScreenLockState.m in Sources */,
 				E31FE95A205A5EAE00D8D986 /* ViewController.m in Sources */,
+				E3EFD15E205D0C7200F15364 /* ZPAPhoneActiveTime.m in Sources */,
 				E31FE965205A5EAE00D8D986 /* main.m in Sources */,
 				E31FE957205A5EAE00D8D986 /* AppDelegate.m in Sources */,
 			);
