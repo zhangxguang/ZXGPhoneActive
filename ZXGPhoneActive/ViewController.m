@@ -73,7 +73,7 @@
 - (void)openTimeLimitAction:(NSTimer*)timer
 {
     self.limit_Time--;
-    NSLog(@"%d", self.limit_Time);
+//    NSLog(@"%d", self.limit_Time);
     if (self.limit_Time == 0) {
         self.limit_Time = 10000;
     }
@@ -93,7 +93,7 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     CLLocation *newLocation = locations[0];
 
-    // 获取当前所在的城市名
+    //获取当前所在的城市名
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     //根据经纬度反向地理编译出地址信息
     [geocoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *array, NSError *error){
@@ -106,11 +106,11 @@
                 //四大直辖市的城市信息无法通过locality获得，只能通过获取省份的方法来获得（如果city为空，则可知为直辖市）
                 city = placemark.administrativeArea;
             }
-            NSLog(@"city = %@", city);//石家庄市
-            NSLog(@"--%@",placemark.name);//黄河大道221号
-            NSLog(@"++++%@",placemark.subLocality); //裕华区
-            NSLog(@"country == %@",placemark.country);//中国
-            NSLog(@"administrativeArea == %@",placemark.administrativeArea); //河北省
+            NSLog(@"city (城市) = %@", city);//城市
+            NSLog(@"placemark.name (街道) = %@", placemark.name);//街道
+            NSLog(@"placemark.subLocality (区) = %@", placemark.subLocality); //区
+            NSLog(@"placemark.country (国家) = %@", placemark.country);//国家
+            NSLog(@"placemark.administrativeArea (省) = %@", placemark.administrativeArea); //省
         }
         else if (error == nil && [array count] == 0)
         {
