@@ -70,7 +70,7 @@
 
 - (void)initNSTimer
 {
-    self.limit_Time = 10000;
+    self.limit_Time = 100000;
     //添加计时器 60秒内不可以重复点击按钮
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(openTimeLimitAction:) userInfo:nil repeats:YES];
     //如果不添加下面这条语句，在UITableView拖动的时候，会阻塞定时器的调用
