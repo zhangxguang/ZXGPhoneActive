@@ -9,6 +9,21 @@
 #import "ZPAPhoneActiveTime.h"
 #import "ZPAScreenLockState.h"
 
+@interface ZPAPhoneActiveTime ()
+
++ (instancetype)sharedPhoneActiveTime;
+
+/**
+ 记录手机屏幕活跃时间
+ */
+- (void)recordPhoneActiveTime;
+
+@property ScreenLockedBlock lockedBlock;//屏幕锁定时的回调
+@property ScreenUnLockedBlock unLockedBlock;//屏幕解锁时的回调
+
+@end
+
+
 @implementation ZPAPhoneActiveTime
 
 #pragma mark - 单例
@@ -53,18 +68,30 @@
                                                object:nil];
 }
 
+- (void)recordPhoneActiveTimeWithLockedBlock:(ScreenLockedBlock)lockedBlock AndScreenUnLockedBlock:(ScreenUnLockedBlock)unLockedBlock
+{
+    self.lockedBlock = lockedBlock;
+    self.unLockedBlock = unLockedBlock;
+
+    [self recordPhoneActiveTime];
+}
+
 //屏幕锁定
 - (void)screenLocked:(NSNotification *)notification
 {
-    NSLog(@"屏幕锁定");
-
+    NSDictionary *infoDict = [[NSDictionary alloc] init];
+    if (self.lockedBlock != nil) {
+        self.lockedBlock(infoDict);
+    }
 }
 
 //屏幕解锁
 - (void)screenUnLocked:(NSNotification *)notification
 {
-    NSLog(@"屏幕解锁");
-
+    NSDictionary *infoDict = [[NSDictionary alloc] init];
+    if (self.unLockedBlock != nil) {
+        self.unLockedBlock(infoDict);
+    }
 }
 
 @end

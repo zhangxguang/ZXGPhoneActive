@@ -34,7 +34,13 @@
 - (void)initPhoneActiveTime
 {
      ZPAPhoneActiveTime *phoneActiveTime = [ZPAPhoneActiveTime sharedPhoneActiveTime];
-    [phoneActiveTime recordPhoneActiveTime];
+    [phoneActiveTime recordPhoneActiveTimeWithLockedBlock:^(NSDictionary *infoDict) {
+        //屏幕锁定
+        NSLog(@"屏幕锁定");
+    } AndScreenUnLockedBlock:^(NSDictionary *infoDict) {
+        //屏幕解锁
+        NSLog(@"屏幕解锁");
+    }];
 }
 
 - (void)initSubViews

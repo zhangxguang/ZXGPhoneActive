@@ -8,13 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^ScreenLockedBlock)(NSDictionary *infoDict);
+typedef void (^ScreenUnLockedBlock)(NSDictionary *infoDict);
+
 @interface ZPAPhoneActiveTime : NSObject
 
 + (instancetype)sharedPhoneActiveTime;
 
 /**
  记录手机屏幕活跃时间
+
+ @param lockedBlock 屏幕锁定时的回调
+ @param unLockedBlock 屏幕解锁时的回调
  */
-- (void)recordPhoneActiveTime;
+- (void)recordPhoneActiveTimeWithLockedBlock:(ScreenLockedBlock)lockedBlock AndScreenUnLockedBlock:(ScreenUnLockedBlock)unLockedBlock;
 
 @end
