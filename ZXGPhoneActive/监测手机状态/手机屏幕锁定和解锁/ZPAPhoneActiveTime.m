@@ -18,8 +18,8 @@
  */
 - (void)recordPhoneActiveTime;
 
-@property ScreenLockedBlock lockedBlock;//屏幕锁定时的回调
-@property ScreenUnLockedBlock unLockedBlock;//屏幕解锁时的回调
+@property (nonatomic, copy) ZPAScreenLockedBlock lockedBlock;//屏幕锁定时的回调
+@property (nonatomic, copy) ZPAScreenUnLockedBlock unLockedBlock;//屏幕解锁时的回调
 
 @end
 
@@ -68,7 +68,7 @@
                                                object:nil];
 }
 
-- (void)recordPhoneActiveTimeWithLockedBlock:(ScreenLockedBlock)lockedBlock AndScreenUnLockedBlock:(ScreenUnLockedBlock)unLockedBlock
+- (void)recordPhoneActiveTimeWithLockedBlock:(ZPAScreenLockedBlock)lockedBlock AndScreenUnLockedBlock:(ZPAScreenUnLockedBlock)unLockedBlock
 {
     self.lockedBlock = lockedBlock;
     self.unLockedBlock = unLockedBlock;
