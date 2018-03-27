@@ -33,7 +33,7 @@
 
 - (void)initPhoneActiveTime
 {
-     ZPAPhoneActiveTime *phoneActiveTime = [ZPAPhoneActiveTime sharedPhoneActiveTime];
+    ZPAPhoneActiveTime *phoneActiveTime = [ZPAPhoneActiveTime sharedPhoneActiveTime];
     [phoneActiveTime recordPhoneActiveTimeWithLockedBlock:^(NSDictionary *infoDict) {
         //屏幕锁定
         NSLog(@"屏幕锁定");
