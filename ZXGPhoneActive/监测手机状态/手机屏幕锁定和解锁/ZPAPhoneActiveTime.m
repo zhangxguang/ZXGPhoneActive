@@ -79,7 +79,10 @@
 //屏幕锁定
 - (void)screenLocked:(NSNotification *)notification
 {
-    NSDictionary *infoDict = [[NSDictionary alloc] init];
+    NSDate *nowDate = [NSDate date];
+    NSMutableDictionary *infoDict = [NSMutableDictionary dictionary];
+    [infoDict setValue:nowDate forKey:@"nowDate"];
+    
     if (self.lockedBlock != nil) {
         self.lockedBlock(infoDict);
     }
@@ -88,7 +91,10 @@
 //屏幕解锁
 - (void)screenUnLocked:(NSNotification *)notification
 {
-    NSDictionary *infoDict = [[NSDictionary alloc] init];
+    NSDate *nowDate = [NSDate date];
+    NSMutableDictionary *infoDict = [NSMutableDictionary dictionary];
+    [infoDict setValue:nowDate forKey:@"nowDate"];
+    
     if (self.unLockedBlock != nil) {
         self.unLockedBlock(infoDict);
     }

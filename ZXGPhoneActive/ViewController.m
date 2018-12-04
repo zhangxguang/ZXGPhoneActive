@@ -10,7 +10,7 @@
 #import <Masonry/Masonry.h>
 #import <CoreLocation/CoreLocation.h>
 #import "ZPAPhoneActiveTime.h"
-#import "ZPANotificationManager.h"
+#import "ZPADisposeNotification.h"
 
 @interface ViewController () <CLLocationManagerDelegate>
 
@@ -35,7 +35,7 @@
 
 - (void)initPhoneActiveTime
 {
-    ZPANotificationManager *notificationManager = [ZPANotificationManager sharedNotificationManager];
+    
     
     ZPAPhoneActiveTime *phoneActiveTime = [ZPAPhoneActiveTime sharedPhoneActiveTime];
     [phoneActiveTime recordPhoneActiveTimeWithLockedBlock:^(NSDictionary *infoDict) {
@@ -46,7 +46,8 @@
     } AndScreenUnLockedBlock:^(NSDictionary *infoDict) {
         //屏幕解锁
         NSLog(@"屏幕解锁");
-        [notificationManager registerNotification:1];
+        ZPADisposeNotification *disposeNotification = [[ZPADisposeNotification alloc] init];
+        [disposeNotification disposeNotification:infoDict];
         
     }];
 }

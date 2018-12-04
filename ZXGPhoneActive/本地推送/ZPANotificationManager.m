@@ -73,15 +73,17 @@
 
 #pragma mark - 使用 UNNotification 本地通知
 //使用 UNNotification 本地通知
-- (void)registerNotification:(NSInteger)alerTime
+- (void)registerNotification:(NSInteger)alerTime notificationInfo:(NSDictionary *)infoDict
 {
+    NSString *title = infoDict[@"title"];
+    NSString *body = infoDict[@"body"];
+    
     // 使用 UNUserNotificationCenter 来管理通知
     UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
-
     //需创建一个包含待通知内容的 UNMutableNotificationContent 对象，注意不是 UNNotificationContent ,此对象为不可变对象。
     UNMutableNotificationContent* content = [[UNMutableNotificationContent alloc] init];
-    content.title = [NSString localizedUserNotificationStringForKey:@"又玩手机" arguments:nil];
-    content.body = [NSString localizedUserNotificationStringForKey:@"一天天的就知道玩手机"
+    content.title = [NSString localizedUserNotificationStringForKey:title arguments:nil];
+    content.body = [NSString localizedUserNotificationStringForKey:body
                                                          arguments:nil];
     content.sound = [UNNotificationSound defaultSound];
 

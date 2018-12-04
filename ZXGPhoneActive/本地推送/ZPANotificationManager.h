@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedNotificationManager;
 - (void)startNotification;
-- (void)registerNotification:(NSInteger)alerTime;
+- (void)registerNotification:(NSInteger)alerTime notificationInfo:(NSDictionary *)infoDict;
 
 @end
 
