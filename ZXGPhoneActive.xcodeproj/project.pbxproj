@@ -18,6 +18,7 @@
 		E31FE965205A5EAE00D8D986 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E31FE964205A5EAE00D8D986 /* main.m */; };
 		E31FE96F205A5EAE00D8D986 /* ZXGPhoneActiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E31FE96E205A5EAE00D8D986 /* ZXGPhoneActiveTests.m */; };
 		E31FE97A205A5EAE00D8D986 /* ZXGPhoneActiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E31FE979205A5EAE00D8D986 /* ZXGPhoneActiveUITests.m */; };
+		E346C71221B66BF5003BCF28 /* ZPANotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E346C71121B66BF5003BCF28 /* ZPANotificationManager.m */; };
 		E3EFD15B205D0BCA00F15364 /* ZPAScreenLockState.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFD15A205D0BCA00F15364 /* ZPAScreenLockState.m */; };
 		E3EFD15E205D0C7200F15364 /* ZPAPhoneActiveTime.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFD15D205D0C7200F15364 /* ZPAPhoneActiveTime.m */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,8 @@
 		E31FE975205A5EAE00D8D986 /* ZXGPhoneActiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZXGPhoneActiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31FE979205A5EAE00D8D986 /* ZXGPhoneActiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGPhoneActiveUITests.m; sourceTree = "<group>"; };
 		E31FE97B205A5EAE00D8D986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E346C71021B66BF5003BCF28 /* ZPANotificationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPANotificationManager.h; sourceTree = "<group>"; };
+		E346C71121B66BF5003BCF28 /* ZPANotificationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPANotificationManager.m; sourceTree = "<group>"; };
 		E3EFD159205D0BCA00F15364 /* ZPAScreenLockState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPAScreenLockState.h; sourceTree = "<group>"; };
 		E3EFD15A205D0BCA00F15364 /* ZPAScreenLockState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPAScreenLockState.m; sourceTree = "<group>"; };
 		E3EFD15C205D0C7200F15364 /* ZPAPhoneActiveTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPAPhoneActiveTime.h; sourceTree = "<group>"; };
@@ -147,6 +150,7 @@
 		E31FE954205A5EAE00D8D986 /* ZXGPhoneActive */ = {
 			isa = PBXGroup;
 			children = (
+				E346C70F21B66BC9003BCF28 /* 本地推送 */,
 				E3EFD157205D0B5100F15364 /* 监测手机状态 */,
 				E31FE955205A5EAE00D8D986 /* AppDelegate.h */,
 				E31FE956205A5EAE00D8D986 /* AppDelegate.m */,
@@ -177,6 +181,15 @@
 				E31FE97B205A5EAE00D8D986 /* Info.plist */,
 			);
 			path = ZXGPhoneActiveUITests;
+			sourceTree = "<group>";
+		};
+		E346C70F21B66BC9003BCF28 /* 本地推送 */ = {
+			isa = PBXGroup;
+			children = (
+				E346C71021B66BF5003BCF28 /* ZPANotificationManager.h */,
+				E346C71121B66BF5003BCF28 /* ZPANotificationManager.m */,
+			);
+			path = "本地推送";
 			sourceTree = "<group>";
 		};
 		E3EFD157205D0B5100F15364 /* 监测手机状态 */ = {
@@ -492,6 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E346C71221B66BF5003BCF28 /* ZPANotificationManager.m in Sources */,
 				E3EFD15B205D0BCA00F15364 /* ZPAScreenLockState.m in Sources */,
 				E31FE95A205A5EAE00D8D986 /* ViewController.m in Sources */,
 				E3EFD15E205D0C7200F15364 /* ZPAPhoneActiveTime.m in Sources */,
@@ -662,8 +676,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2NW8BV74J4;
+				DEVELOPMENT_TEAM = GV5Y7VY696;
 				INFOPLIST_FILE = ZXGPhoneActive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zxg.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -679,8 +694,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2NW8BV74J4;
+				DEVELOPMENT_TEAM = GV5Y7VY696;
 				INFOPLIST_FILE = ZXGPhoneActive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zxg.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ZPANotificationManager.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    ZPANotificationManager *notificationManager = [ZPANotificationManager sharedNotificationManager];
+    [notificationManager startNotification];
+
+    
+
     return YES;
 }
 
