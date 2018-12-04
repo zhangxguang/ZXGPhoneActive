@@ -15,6 +15,7 @@
 @interface ViewController () <CLLocationManagerDelegate>
 
 @property (nonatomic, weak) UILabel *tipsLable;
+@property (nonatomic, weak) UIImageView *tipsImageView;
 @property (nonatomic, strong) CLLocationManager *locationManger;
 @property (nonatomic, assign) int limit_Time;
 
@@ -35,7 +36,6 @@
 - (void)initPhoneActiveTime
 {
     ZPANotificationManager *notificationManager = [ZPANotificationManager sharedNotificationManager];
-    
     
     ZPAPhoneActiveTime *phoneActiveTime = [ZPAPhoneActiveTime sharedPhoneActiveTime];
     [phoneActiveTime recordPhoneActiveTimeWithLockedBlock:^(NSDictionary *infoDict) {
@@ -65,6 +65,20 @@
         make.right.equalTo(self.view.mas_right);
         make.height.mas_equalTo(50);
     }];
+    
+    UIImageView *tipsImageView = [[UIImageView alloc] init];
+    tipsImageView.contentMode = UIViewContentModeScaleAspectFit;
+    tipsImageView.image = [UIImage imageNamed:@"bigBrother"];
+    [self.view addSubview:tipsImageView];
+    self.tipsImageView = tipsImageView;
+    
+    [self.tipsImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top);
+        make.right.equalTo(self.view.mas_right);
+        make.left.equalTo(self.view.mas_left);
+        make.bottom.equalTo(self.view.mas_bottom);
+    }];
+    
 }
 
 - (void)initLocationManger
