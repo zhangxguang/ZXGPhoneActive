@@ -6,6 +6,7 @@ target 'ZXGPhoneActive' do
   # use_frameworks!
 
    pod 'Masonry'
+   pod 'BmobSDK'
 
   # Pods for ZXGPhoneActive
 

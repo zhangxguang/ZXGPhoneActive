@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DAB331164D5BFA9FA8AC6F6BB6B81DB1"
+               BlueprintIdentifier = "D508CBD6EE5A3075B317C83F0B24A0CC"
                BlueprintName = "Pods-ZXGPhoneActive"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-ZXGPhoneActive.a">

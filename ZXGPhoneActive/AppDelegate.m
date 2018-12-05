@@ -19,6 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    //初始化 Bmob
+    [Bmob registerWithAppKey:@"15bbfc042211c5a04cee666f26c08f4e"];
+    
     
     ZPANotificationManager *notificationManager = [ZPANotificationManager sharedNotificationManager];
     [notificationManager startNotification];

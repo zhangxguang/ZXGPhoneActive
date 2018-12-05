@@ -35,8 +35,6 @@
 
 - (void)initPhoneActiveTime
 {
-    
-    
     ZPAPhoneActiveTime *phoneActiveTime = [ZPAPhoneActiveTime sharedPhoneActiveTime];
     [phoneActiveTime recordPhoneActiveTimeWithLockedBlock:^(NSDictionary *infoDict) {
         //屏幕锁定
@@ -54,19 +52,6 @@
 
 - (void)initSubViews
 {
-    UILabel *tipsLable = [[UILabel alloc] init];
-    tipsLable.textAlignment = NSTextAlignmentCenter;
-    tipsLable.font = [UIFont systemFontOfSize:20];
-    [self.view addSubview:tipsLable];
-    self.tipsLable = tipsLable;
-
-    [self.tipsLable mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_topLayoutGuideTop).offset(200);
-        make.left.equalTo(self.view.mas_left);
-        make.right.equalTo(self.view.mas_right);
-        make.height.mas_equalTo(50);
-    }];
-    
     UIImageView *tipsImageView = [[UIImageView alloc] init];
     tipsImageView.contentMode = UIViewContentModeScaleAspectFit;
     tipsImageView.image = [UIImage imageNamed:@"bigBrother"];
@@ -80,6 +65,18 @@
         make.bottom.equalTo(self.view.mas_bottom);
     }];
     
+    UILabel *tipsLable = [[UILabel alloc] init];
+    tipsLable.textAlignment = NSTextAlignmentCenter;
+    tipsLable.font = [UIFont systemFontOfSize:20];
+    [self.view addSubview:tipsLable];
+    self.tipsLable = tipsLable;
+    
+    [self.tipsLable mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.mas_topLayoutGuideTop).offset(80);
+        make.left.equalTo(self.view.mas_left);
+        make.right.equalTo(self.view.mas_right);
+        make.height.mas_equalTo(50);
+    }];
 }
 
 - (void)initLocationManger
@@ -99,7 +96,7 @@
 
 - (void)initNSTimer
 {
-    self.limit_Time = 100000;
+    self.limit_Time = 3000000;
     //添加计时器 60秒内不可以重复点击按钮
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(openTimeLimitAction:) userInfo:nil repeats:YES];
     //如果不添加下面这条语句，在UITableView拖动的时候，会阻塞定时器的调用
@@ -111,8 +108,14 @@
 {
     self.limit_Time--;
 //    NSLog(@"%d", self.limit_Time);
+    
+    if (self.limit_Time%300 == 0) {
+        //每隔300秒定位一次，然后把数据发送到服务器
+        NSLog(@"搞事情啦");
+    }
+    
     if (self.limit_Time == 0) {
-        self.limit_Time = 10000;
+        self.limit_Time = 3000000;
     }
     self.tipsLable.text = [NSString stringWithFormat:@"%d", self.limit_Time];
 }

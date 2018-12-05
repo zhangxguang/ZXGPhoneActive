@@ -1,12 +1,20 @@
 PODS:
+  - BmobSDK (2.3.1)
   - Masonry (1.1.0)
 
 DEPENDENCIES:
+  - BmobSDK
   - Masonry
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BmobSDK
+    - Masonry
+
 SPEC CHECKSUMS:
+  BmobSDK: e0f9e4b451233a80af63a8ae4f2d239474bf567b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: ec1a89c2c4af46c658d101ae8d856569050c6bf2
+PODFILE CHECKSUM: 3deb9444c550e6ec922e56881e54b1f31d7d56f0
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
