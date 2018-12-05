@@ -17,6 +17,8 @@
 @property (nonatomic, weak) UILabel *tipsLable;
 @property (nonatomic, weak) UIImageView *tipsImageView;
 @property (nonatomic, strong) CLLocationManager *locationManger;
+
+@property (nonatomic, weak) NSTimer *timer;
 @property (nonatomic, assign) int limit_Time;
 
 @end
@@ -98,23 +100,16 @@
 {
     self.limit_Time = 3000000;
     //添加计时器 60秒内不可以重复点击按钮
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(openTimeLimitAction:) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(openTimeLimitAction:) userInfo:nil repeats:YES];
     //如果不添加下面这条语句，在UITableView拖动的时候，会阻塞定时器的调用
-    [[NSRunLoop currentRunLoop] addTimer:timer forMode:UITrackingRunLoopMode];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:UITrackingRunLoopMode];
 }
 
 //计时器
 - (void)openTimeLimitAction:(NSTimer*)timer
 {
     self.limit_Time--;
-//    NSLog(@"%d", self.limit_Time);
-    
-    if (self.limit_Time%10 == 0) {
-        //每隔300秒定位一次，然后把数据发送到服务器
-        NSLog(@"搞事情啦");
-        //开始定位
-        [self.locationManger startUpdatingLocation];
-    }
+    NSLog(@"%d", self.limit_Time);
     
     if (self.limit_Time == 0) {
         self.limit_Time = 3000000;
@@ -162,8 +157,8 @@
             NSLog(@"An error occurred = %@", error);
         }
     }];
-    //系统会一直更新数据，直到选择停止更新，因为我们只需要获得一次经纬度即可，所以获取之后就停止更新
-    [manager stopUpdatingLocation];
+    //系统会一直更新数据，耗电很多，如果不需要持续定位，得停止定位。
+//    [manager stopUpdatingLocation];
 }
 
 
