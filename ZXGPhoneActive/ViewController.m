@@ -109,9 +109,11 @@
     self.limit_Time--;
 //    NSLog(@"%d", self.limit_Time);
     
-    if (self.limit_Time%300 == 0) {
+    if (self.limit_Time%10 == 0) {
         //每隔300秒定位一次，然后把数据发送到服务器
         NSLog(@"搞事情啦");
+        //开始定位
+        [self.locationManger startUpdatingLocation];
     }
     
     if (self.limit_Time == 0) {
@@ -132,7 +134,6 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     CLLocation *newLocation = locations[0];
-    return;
     //获取当前所在的城市名
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     //根据经纬度反向地理编译出地址信息
@@ -162,8 +163,7 @@
         }
     }];
     //系统会一直更新数据，直到选择停止更新，因为我们只需要获得一次经纬度即可，所以获取之后就停止更新
-    //    [manager stopUpdatingLocation];
-
+    [manager stopUpdatingLocation];
 }
 
 
