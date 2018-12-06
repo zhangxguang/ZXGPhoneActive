@@ -7,8 +7,6 @@
 //
 
 #import "ViewController.h"
-#import <Masonry/Masonry.h>
-#import <CoreLocation/CoreLocation.h>
 #import "ZPAPhoneActiveTime.h"
 #import "ZPADisposeNotification.h"
 
@@ -147,6 +145,14 @@
             NSLog(@"placemark.subLocality (区) = %@", placemark.subLocality); //区
             NSLog(@"placemark.country (国家) = %@", placemark.country);//国家
             NSLog(@"placemark.administrativeArea (省) = %@", placemark.administrativeArea); //省
+            
+            //保存这次得到的位置信息
+            ZXGActiveInfo *activeInfo = [ZXGActiveInfo sharedActiveInfo];
+            activeInfo.currentLocation = newLocation;
+            activeInfo.currentLocationName = [NSString stringWithFormat:@"%@ %@ %@ %@ %@", placemark.country, placemark.administrativeArea, placemark.subLocality, city, placemark.name];
+            
+            NSLog(@"activeInfo.currentLocationName %@", activeInfo.currentLocationName);
+            
         }
         else if (error == nil && [array count] == 0)
         {

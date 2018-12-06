@@ -21,6 +21,7 @@
 		E346C71221B66BF5003BCF28 /* ZPANotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E346C71121B66BF5003BCF28 /* ZPANotificationManager.m */; };
 		E346C71521B67676003BCF28 /* ZPANotificationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E346C71421B67676003BCF28 /* ZPANotificationInfo.m */; };
 		E346C71821B67BC8003BCF28 /* ZPADisposeNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E346C71721B67BC8003BCF28 /* ZPADisposeNotification.m */; };
+		E348936E21B8C19A00339307 /* ZXGActiveInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E348936D21B8C19A00339307 /* ZXGActiveInfo.m */; };
 		E3BEA72F21B7C51C003CC940 /* CBDBmobMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BEA72E21B7C51C003CC940 /* CBDBmobMethod.m */; };
 		E3EFD15B205D0BCA00F15364 /* ZPAScreenLockState.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFD15A205D0BCA00F15364 /* ZPAScreenLockState.m */; };
 		E3EFD15E205D0C7200F15364 /* ZPAPhoneActiveTime.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EFD15D205D0C7200F15364 /* ZPAPhoneActiveTime.m */; };
@@ -75,6 +76,8 @@
 		E346C71421B67676003BCF28 /* ZPANotificationInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPANotificationInfo.m; sourceTree = "<group>"; };
 		E346C71621B67BC8003BCF28 /* ZPADisposeNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPADisposeNotification.h; sourceTree = "<group>"; };
 		E346C71721B67BC8003BCF28 /* ZPADisposeNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPADisposeNotification.m; sourceTree = "<group>"; };
+		E348936C21B8C19900339307 /* ZXGActiveInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGActiveInfo.h; sourceTree = "<group>"; };
+		E348936D21B8C19A00339307 /* ZXGActiveInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGActiveInfo.m; sourceTree = "<group>"; };
 		E3BEA72D21B7C51C003CC940 /* CBDBmobMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDBmobMethod.h; sourceTree = "<group>"; };
 		E3BEA72E21B7C51C003CC940 /* CBDBmobMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDBmobMethod.m; sourceTree = "<group>"; };
 		E3BEA73021B7C5B9003CC940 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -161,6 +164,7 @@
 		E31FE954205A5EAE00D8D986 /* ZXGPhoneActive */ = {
 			isa = PBXGroup;
 			children = (
+				E348936B21B8C17600339307 /* ActiveInfo */,
 				E346C70F21B66BC9003BCF28 /* 本地推送 */,
 				E3EFD157205D0B5100F15364 /* 监测手机状态 */,
 				E31FE955205A5EAE00D8D986 /* AppDelegate.h */,
@@ -207,6 +211,15 @@
 				E346C71721B67BC8003BCF28 /* ZPADisposeNotification.m */,
 			);
 			path = "本地推送";
+			sourceTree = "<group>";
+		};
+		E348936B21B8C17600339307 /* ActiveInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E348936C21B8C19900339307 /* ZXGActiveInfo.h */,
+				E348936D21B8C19A00339307 /* ZXGActiveInfo.m */,
+			);
+			path = ActiveInfo;
 			sourceTree = "<group>";
 		};
 		E3EFD157205D0B5100F15364 /* 监测手机状态 */ = {
@@ -433,6 +446,7 @@
 				E3EFD15E205D0C7200F15364 /* ZPAPhoneActiveTime.m in Sources */,
 				E346C71821B67BC8003BCF28 /* ZPADisposeNotification.m in Sources */,
 				E31FE965205A5EAE00D8D986 /* main.m in Sources */,
+				E348936E21B8C19A00339307 /* ZXGActiveInfo.m in Sources */,
 				E31FE957205A5EAE00D8D986 /* AppDelegate.m in Sources */,
 				E346C71521B67676003BCF28 /* ZPANotificationInfo.m in Sources */,
 			);
